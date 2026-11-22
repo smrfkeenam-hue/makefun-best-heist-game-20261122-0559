@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velvet Vault — The Meridian Job</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #05070d;
+    height: 100%;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  canvas {
+    display: block;
+    width: min(1280px, 100vw);
+    height: auto;
+    max-height: 100vh;
+    aspect-ratio: 16 / 9;
+    background: #0a0f1e;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+    cursor: crosshair;
+  }
+  #test-result {
+    position: fixed;
+    left: 6px;
+    bottom: 6px;
+    color: #5a6a8a;
+    font: 11px monospace;
+    pointer-events: none;
+    opacity: 0; /* invisible on screen, still readable in the DOM for tests */
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+</div>
+<div id="test-result"></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
